@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention RAG Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <main class="shell">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Attention Is All You Need</p>
+                <h1>Ask sharp questions. Get paper-grounded answers.</h1>
+            </div>
+            <div class="hero-card">
+                <p class="hero-card-label">Mode</p>
+                <p class="hero-card-value">Research Q&A</p>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <form id="question-form" class="panel composer">
+                <div class="composer-header">
+                    <label for="question" class="label">Your question</label>
+                </div>
+                <textarea
+                    id="question"
+                    name="question"
+                    rows="5"
+                    placeholder="Why does the paper use multi-head attention instead of a single attention function?"
+                    required
+                ></textarea>
+
+                <div class="actions">
+                    <button type="submit" id="submit-button">Send Question</button>
+                </div>
+            </form>
+
+            <section class="panel response-panel">
+                <div class="response-header">
+                    <div>
+                        <p class="label">Answer</p>
+                    </div>
+                    <span id="status-pill" class="status idle">Ready</span>
+                </div>
+                <div id="answer" class="answer">
+                    Your response will appear here after you submit a question.
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
